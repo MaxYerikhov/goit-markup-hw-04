@@ -44,7 +44,6 @@ section {
 
 address {
   font-style: normal;
-  margin-top: 20px;
 }
 
 .container {
@@ -122,6 +121,8 @@ a {
 }
 
 .contacts {
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -145,7 +146,10 @@ ul {
   background: var(--dark-background-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/bg.jpg);
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -426,22 +430,24 @@ footer {
   display: flex;
   gap: 30px;
   justify-content: space-between;
-  margin-top: 30px;
 }
 
 .icon-link {
   display: flex;
   width: 170px;
   height: 92px;
-  border: 1px solid #afb1b8;
+  border: 1px solid;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  color: #afb1b8;
 }
-
+.icon-client {
+  fill: currentColor;
+}
 .icon-link:hover,
 .icon-link:focus {
-  color: red;
+  color: var(--accent-color);
 }
 
 .company-title {
@@ -458,6 +464,7 @@ footer {
   display: flex;
   justify-content: center;
   column-gap: 10px;
+  margin-top: 16px;
 }
 
 .social-list-icon {
@@ -475,8 +482,6 @@ footer {
   height: 44px;
   background-color: #fff;
   color: #afb1b8;
-  border: transparent;
-  margin-top: 16px;
 }
 
 .social-list-link:hover,
@@ -507,12 +512,6 @@ footer {
   fill: currentColor;
 }
 
-.footer-icons {
-  display: flex;
-  width: 206px;
-  height: 80px;
-}
-
 .footer-icons-link {
   display: flex;
   justify-content: center;
@@ -531,6 +530,7 @@ footer {
 .footer-icons-list {
   display: flex;
   column-gap: 10px;
+  margin-top: 10px;
 }
 
 .footer-social-icons {
@@ -541,7 +541,6 @@ footer {
 
 .footer-icons-title {
   display: inline-block;
-  margin-bottom: 20px;
 
   font-weight: 700;
   font-size: 14px;
@@ -552,8 +551,5 @@ footer {
 
 .social-logo {
   display: flex;
-}
-
-.icon-link-list {
-  margin-top: 20px;
+  align-items: baseline;
 }
